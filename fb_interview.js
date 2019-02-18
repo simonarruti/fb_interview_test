@@ -1,4 +1,4 @@
-// Given a list of people with their birth and deat years, find the year with the highest population alive.
+// Given a list of people with their birth and death years, find the year with the highest population alive.
 
 const data = [
   {birthyear: 1950, deathyear: 1970},
@@ -39,7 +39,7 @@ const populationByYears = []
 
 function addPeople (year) {
   const yearIndex = populationByYears.find(element => element.year === year)
-  yearIndex != undefined ? yearIndex.alive++ : populationByYears.push({year: year, alive: 1})
+  yearIndex !== undefined ? yearIndex.alive++ : populationByYears.push({year: year, alive: 1})
 }
 
 for (let element of data) {
